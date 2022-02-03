@@ -41,9 +41,14 @@ const routes = [
     component: () => import('../views/Conversation.vue')
   },
   {
-    path: '/allmembers',
+    path: '/membres',
     name: 'Members',
-    component: () => import('../views/ListMembers.vue')
+    component: () => import('../views/Members.vue')
+  },
+  {
+    path: '/membre/:idMembre',
+    name: 'Member',
+    component: () => import('../views/Member.vue')
   },
 
 

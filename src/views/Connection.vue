@@ -16,10 +16,9 @@
                                     </div>
                                 </div>
                                 <div class="field">
-                                    <p class="control has-icons-left">
+                                    <p class="">
                                         <input class="input" type="password" required v-model="password">
                                         <span class="icon is-small is-left">
-                                        <i class="fas fa-lock"></i>
                                         </span>
                                     </p>
                                 </div>
@@ -56,7 +55,7 @@ export default {
               email:this.email,
               password:this.password
           }).then(response=>{
-              console.log(response.data)
+              //console.log(response.data)
               //alert('Votre etes connecte')
               this.$store.commit('setToken',response.data.token);
               this.$store.commit('setMember',response.data.member);

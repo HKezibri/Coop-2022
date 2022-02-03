@@ -51,11 +51,11 @@ export default {
           password: this.password,
         })
         .then((response) => {
-          console.log(response.data);
-          alert("Votre compte a ete cree. Vous pouvez vous connecter");
+          //console.log(response.data);
+          //alert("Votre compte a ete cree. Vous pouvez vous connecter");
         })
         .catch((error) => {
-          alert(error.response.data.message);
+         // alert(error.response.data.message);
           this.$router.push("/");
         });
     },

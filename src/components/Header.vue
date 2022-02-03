@@ -9,7 +9,7 @@
     <div class="navbar-start">
       <router-link class="navbar-item" to="/">Conversations</router-link>
       <router-link class="navbar-item" to="creer-conversation">Creer une conversation</router-link>
-      <router-link class="navbar-item" to="/allmembers">Tous les Membres</router-link>
+      <router-link class="navbar-item" to="/membres">Tous les Membres</router-link>
     </div>
 
     <div class="navbar-end">

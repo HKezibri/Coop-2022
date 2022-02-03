@@ -30,10 +30,9 @@
 </div>
 </template>
 
-  <script>
-import Header from '../components/Header.vue';
+<script>
     export default {
-  components: { Header },
+  components: {  },
       data() {
         return {
           conversation: {
@@ -55,7 +54,7 @@ import Header from '../components/Header.vue';
         },
       },
     };
-  </script>
+</script>
 
-  <style></style>
-</template>
+<style></style>
+

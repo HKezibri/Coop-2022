@@ -10,13 +10,11 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
 import Conversation from '@/components/Conversation.vue'
 import Connection from './Connection.vue'
 export default{
 
     components: {
-        Header,
         Conversation,
         Connection
     },

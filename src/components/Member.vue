@@ -1,10 +1,6 @@
 <template>
- <router-link :to="{name:'Members', params:{id:member.id}}" class="box"> 
-   <!--  <div class="media-content">
-        <p class="title is-4">{{member.fullname}}</p>
-        <p class="subtitle is-6">{{member.email}}</p>
-    </div> -->
-    <div class="card">
+ <!--<router-link :to="{name:'Members', params:{id:member.id}}" class="box">  </router-link> -->
+  <div class="card">
   <div class="card-content">
     <div class="media">
       <div class="media-left">
@@ -15,11 +11,12 @@
       <div class="media-content">
         <p class="title is-4">{{member.fullname}}</p>
         <p class="subtitle is-6">{{member.email}}</p>
+        
       </div>
     </div>
   </div>
 </div>
- </router-link>
+
 </template>
 
 <script>

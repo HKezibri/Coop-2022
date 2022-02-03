@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 
+import {Outils} from "./mixins/outils.js";
+Vue.mixin(Outils);
+
 Vue.prototype.$api = new axios.create({
   baseURL : "https://allweb.fun/coop/api/",
   params : {

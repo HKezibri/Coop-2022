@@ -22,7 +22,7 @@ export default{
       this.seConnecter();
     }else{
       this.$api
-      .get(`members/${this.$store.state.member.id}/signed`)
+      .get(`members/${this.$store.state.member.id}/signedin`)
       .then(this.demarrer)
       .catch(this.seConnecter)
     }
@@ -39,9 +39,9 @@ export default{
       });
     },
     seConnecter(){
-        this.ready();
         this.$store.commit("setToken",false);
         this.$router.push("/connection");
+        this.ready();
         
     }
   }
