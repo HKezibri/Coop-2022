@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <Header />
@@ -14,7 +13,7 @@
           <div class="card-content">
             <div class="content">{{message.message}}</div>
           </div>
-        </div>
+        </div> 
       </template>
     </section>
     </div>
