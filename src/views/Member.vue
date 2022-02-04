@@ -34,7 +34,7 @@ export default {
   },
     mounted(){
         this.member = this.$store.getters.getMembre(this.$route.params.idMembre);
-        console.log(this.$route.params.idMembre)
+        //console.log(this.$route.params.idMembre)
     },
     computed:{
      /*  avatar(){

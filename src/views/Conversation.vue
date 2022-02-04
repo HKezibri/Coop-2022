@@ -31,6 +31,7 @@ export default {
     return{
       conversation: false,
       messages: [],
+      members: this.$store.state.members
     };
   },
   mounted(){
