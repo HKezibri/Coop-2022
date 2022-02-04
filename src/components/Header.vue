@@ -15,7 +15,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div>
-          Connecte en tant que <b>{{$store.state.member.fullname}}</b>
+          Connecté en tant que <b>{{$store.state.member.fullname}}</b>
         </div> 
       </div>
       <div class="navbar-item">

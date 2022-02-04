@@ -26,9 +26,11 @@ export default {
                 message: this.message,
                 member_id: this.$store.state.member.id,
             }).then(response=>{
-                console.log(response.data)
+                this.$bus.$emit('charger-messages',response.data)
+                this.message = "";
+                //console.log(response.data)
             });
-            this.$bus.$emit('charger-messages')
+            
         },
 
     },

@@ -43,7 +43,7 @@ export default {
       created_at(){
         if(this.member){
           let d = new Date(this.member.created_at);
-          return d.toLocaleDateString("fr-FR") + ' a ' + d.toLocaleTimeString("fr-FR");
+          return d.toLocaleDateString("fr-FR") + ' à ' + d.toLocaleTimeString("fr-FR");
         }
       }
     }

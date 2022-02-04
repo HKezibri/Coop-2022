@@ -26,11 +26,8 @@
 </template>
 
 <script>
-import Member from "@/components/Member.vue"
 export default {
-  components: {
-    Member
-  },
+
   data() {
     return {
         members: []

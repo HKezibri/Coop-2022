@@ -3,17 +3,15 @@
     <Header />
     <section class="section">
       <div class="box" v-if="conversation">
-        <p class="title is-4">{{conversation.topic}}</p>
+        <p class="title is-4">{{conversation.topic}}
+          <span class="tag">{{messages.length}} message(s)</span>
+        </p>
         <p class="subtitle is-6">{{conversation.label}}</p>
       </div>
       <poster-message :conversation = "conversation" />
-
+      <h5 class="title is-5 has-text-warning">Les messages</h5>
       <template v-for="message in messages">
-        <div class="card md-2">
-          <div class="card-content">
-            <div class="content">{{message.message}}</div>
-          </div>
-        </div> 
+          <message :message="message" :key="message.id" />
       </template>
     </section>
     </div>
@@ -22,9 +20,12 @@
 <script>
 
 import PosterMessage from "../components/PosterMessage.vue";
+import Message from "../components/Message.vue";
+
 export default {
   components:{
-    PosterMessage
+    PosterMessage,
+    Message
   },
   data(){
     return{
@@ -34,8 +35,9 @@ export default {
   },
   mounted(){
     this.chargerConversation();
-    this.$bus.$on('charger-conversation', this.chargerConversation)
-    this.$bus.$on('charger-messages', this.chargerMessage)
+    //this.$bus.$on('charger-conversation',(data) =>{this.chargerConversation} )
+    this.$bus.$on('charger-messages',(data) =>{this.chargerMessage();
+    });
 
   },
     methods:{
@@ -46,8 +48,8 @@ export default {
       });
     },
     chargerMessage(){
-      this.$api.get(`channels/${this.$route.params.id}`).then((response) => {
-      this.message = response.data;
+      this.$api.get(`channels/${this.conversation.id}/posts`).then((response) => {
+      this.messages = response.data;
      });
     }
   }
